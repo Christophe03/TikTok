@@ -86,34 +86,37 @@ class HomePage extends StatelessWidget {
       "video": "assets/videos/tcd.mp4",
     },
     {
-      "video": "assets/videos/music.mp4",
+      "video": "assets/videos/b.mp4",
     },
     {
-      "video": "assets/videos/madara.mp4",
+      "video": "assets/videos/a.mp4",
     },
     {
-      "video": "assets/videos/will.mp4",
+      "video": "assets/videos/c.mp4",
     },
     {
-      "video": "assets/videos/itachi.mp4",
+      "video": "assets/videos/d.mp4",
     },
     {
-      "video": "assets/videos/amv.mp4",
+      "video": "assets/videos/e.mp4",
     },
     {
-      "video": "assets/videos/naruto.mp4",
+      "video": "assets/videos/n.mp4",
     },
     {
-      "video": "assets/videos/snk.mp4",
+      "video": "assets/videos/r.mp4",
     },
     {
-      "video": "assets/videos/animer.mp4",
+      "video": "assets/videos/x.mp4",
     },
     {
-      "video": "assets/videos/Killua.mp4",
+      "video": "assets/videos/v.mp4",
     },
     {
-      "video": "assets/videos/Jujutsu.mp4",
+      "video": "assets/videos/y.mp4",
+    },
+    {
+      "video": "assets/videos/j.mp4",
     },
   ];
   @override
@@ -215,7 +218,7 @@ class PostContent extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
-                        '@Hashirama_Tcd98',
+                        '@Toumany dit Christophe Diarra',
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.w600,
@@ -223,7 +226,7 @@ class PostContent extends StatelessWidget {
                       ),
                       const SizedBox(height: 10),
                       const Text(
-                        'Les meilleurs AMV du Monde. #live #epic #action @mangasZone # hashirama #art #magas #top #music',
+                        'Digital. #code #web #design @Mali #ODC #flutter #Tiktok #ODC @Kati',
                         style: TextStyle(
                           color: Colors.white,
                         ),
@@ -238,7 +241,7 @@ class PostContent extends StatelessWidget {
                           ),
                           SizedBox(width: 5),
                           Text(
-                            'Original Sound-amv_mangasZone',
+                            'Original Sound-toumany',
                             style: TextStyle(
                               color: Colors.white,
                             ),
@@ -265,7 +268,7 @@ class PostContent extends StatelessWidget {
                             child: const CircleAvatar(
                               radius: 25,
                               backgroundImage:
-                                  AssetImage('assets/images/Minato.jpg'),
+                                  AssetImage('assets/images/tcd.jpg'),
                             ),
                           ),
                           Container(

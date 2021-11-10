@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'dart:math' as math;
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 void main() {
   runApp(const MyApp());
@@ -47,18 +48,18 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           ),
           const BottomNavigationBarItem(
             icon: Icon(Icons.search_rounded),
-            label: 'Reherche',
+            label: 'Découvrir',
           ),
           BottomNavigationBarItem(
             icon: Image.asset(
-              'assets/images/tiktok.png',
+              'assets/images/tiktok_add.png',
               height: 25,
             ),
-            label: 'Ajouter',
+            label: '',
           ),
           const BottomNavigationBarItem(
-            icon: Icon(Icons.messenger_outline_sharp),
-            label: 'Message',
+            icon: Icon(Icons.messenger_outline_rounded),
+            label: 'Boîte de réception',
           ),
           const BottomNavigationBarItem(
             icon: Icon(Icons.person_outline),
@@ -70,8 +71,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         backgroundColor: const Color(0xFF141518),
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.grey,
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
+        showSelectedLabels: true,
+        showUnselectedLabels: true,
         onTap: _onItemTapped,
       ),
     );
@@ -81,6 +82,21 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
 class HomePage extends StatelessWidget {
   HomePage({Key? key}) : super(key: key);
   final List<Map> tiktokItems = [
+    {
+      "video": "assets/videos/tcd.mp4",
+    },
+    {
+      "video": "assets/videos/music.mp4",
+    },
+    {
+      "video": "assets/videos/madara.mp4",
+    },
+    {
+      "video": "assets/videos/will.mp4",
+    },
+    {
+      "video": "assets/videos/itachi.mp4",
+    },
     {
       "video": "assets/videos/amv.mp4",
     },
@@ -293,7 +309,7 @@ class PostContent extends StatelessWidget {
                       child: Column(
                         children: [
                           Icon(
-                            Icons.comment_rounded,
+                            Icons.comment,
                             color: Colors.white.withOpacity(0.85),
                             size: 45,
                           ),
@@ -313,7 +329,7 @@ class PostContent extends StatelessWidget {
                       child: Column(
                         children: [
                           Icon(
-                            Icons.share,
+                            MdiIcons.share,
                             color: Colors.white.withOpacity(0.85),
                             size: 45,
                           ),
@@ -324,6 +340,18 @@ class PostContent extends StatelessWidget {
                               fontSize: 12,
                               fontWeight: FontWeight.w600,
                             ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 80,
+                      child: Column(
+                        children: [
+                          Icon(
+                            Icons.more_horiz,
+                            color: Colors.white.withOpacity(0.85),
+                            size: 45,
                           ),
                         ],
                       ),

@@ -107,16 +107,7 @@ class HomePage extends StatelessWidget {
       "video": "assets/videos/r.mp4",
     },
     {
-      "video": "assets/videos/x.mp4",
-    },
-    {
       "video": "assets/videos/v.mp4",
-    },
-    {
-      "video": "assets/videos/y.mp4",
-    },
-    {
-      "video": "assets/videos/j.mp4",
     },
   ];
   @override
@@ -164,15 +155,28 @@ class _VideoWidgetState extends State<VideoWidget> {
     super.initState();
     _controller = VideoPlayerController.asset(videoUrl)
       ..initialize().then((_) {
-        _controller.setLooping(true);
-        _controller.play();
+        // _controller.setLooping(true);
+        // _controller.play();
         setState(() {});
       });
   }
 
   @override
   Widget build(BuildContext context) {
-    return VideoPlayer(_controller);
+    return GestureDetector(
+      onTap: () {
+        setState(() {
+          _controller.play();
+          _controller.setLooping(true);
+        });
+      },
+      onDoubleTap: () {
+        setState(() {
+          _controller.pause();
+        });
+      },
+      child: VideoPlayer(_controller),
+    );
   }
 }
 
@@ -226,7 +230,7 @@ class PostContent extends StatelessWidget {
                       ),
                       const SizedBox(height: 10),
                       const Text(
-                        'Digital. #code #web #design @Mali #ODC #flutter #Tiktok #ODC @Kati',
+                        'Digital_Mali. #code #Dev #design @Mali #ODC #flutter #Tiktok #ODC @Kati',
                         style: TextStyle(
                           color: Colors.white,
                         ),
@@ -241,7 +245,7 @@ class PostContent extends StatelessWidget {
                           ),
                           SizedBox(width: 5),
                           Text(
-                            'Original Sound-toumany',
+                            'Original Sound-toumanyMixChrist',
                             style: TextStyle(
                               color: Colors.white,
                             ),
@@ -268,7 +272,7 @@ class PostContent extends StatelessWidget {
                             child: const CircleAvatar(
                               radius: 25,
                               backgroundImage:
-                                  AssetImage('assets/images/tcd.jpg'),
+                                  AssetImage('assets/images/tc.jpg'),
                             ),
                           ),
                           Container(
